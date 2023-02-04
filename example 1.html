@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Services</title>
+<style>
+    #slider{
+        margin:auto;
+        width: 800px;
+        height: 450 ;
+        margin: top 10px;
+    }
+    #slider a{
+        position: absolute;
+    }
+    #slider a img{
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        width: 800px;
+        height: 450px;
+    }
+    #slider a:nth-of-type(1){
+        animation-name:fader;
+        animation-delay: 4s;
+        animation-duration: 1s;
+        z-index: 20;
+    }
+    #slider a:nth-of-type(2){
+        z-index:10;
+    }
+    #slider a:nth-of-type(n+3){
+        display:none;
+    }
+    @keyframes fader{
+        from{opacity: 1.0;}
+        to{opacity: 0.0;}
+    }
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header><ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="Index2.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Service.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+        
+      </ul>
+    </header>
+
+<div class="container-fluid p-5 bg-dark text-white text-center">
+  <h1>Services</h1>
+</div>
+
+<div id ="slider">
+    <a href="images/image1.jpeg"><img src="images/image1.jpeg"></a>
+    <a href="images/image2.jpeg"><img src="images/image2.jpeg"></a>
+    <a href="images/image3.jpeg"><img src="images/image3.jpeg"></a>
+</div>
+<script>
+      document.addEventListener("DOMContentLoaded", function() {
+    var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+    var stage = document.getElementById("slider");
+    var arr = stage.getElementsByTagName("a");
+    for(var i=0; i < arr.length; i++) {
+      arr[i].addEventListener("animationend", fadeComplete, false);
+     
+    }
+
+  }, false);
+</script>
+
+
+
+
+</body>
+
+</html>
