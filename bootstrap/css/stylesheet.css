@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+
   }
   
   form {
@@ -16,4 +17,14 @@ body {
   button[type="submit"] {
     width: 100%;
   }
-  
+
+  .small-carousel {
+    width: 30%; /* set the width to 50% */
+    margin: 20px auto 0 auto;}
+
+   #carouselExample {
+      width: 37%; /* adjust the width to 50% */
+      margin: 20px auto 0 auto; /* center the carousel horizontally */
+    }
+    
+ 
